@@ -4,6 +4,7 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-s
 import { AuthContext } from '../../Providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 // import {AuthContext} from '../../Providers/AuthProvider';
 
 const Login = () => {
@@ -109,12 +110,16 @@ const Login = () => {
               </div>
 
             {/* TODO: make button disable for captcha */}
+
               <div className="form-control mt-6">
 
-                <input disabled={disable} className="btn btn-primary" type="submit" value="Login" />
+                <input disabled={false} className="btn btn-primary" type="submit" value="Login" />
               </div>
             </form>
             <p><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
+
+          {/* social login import here! */}
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
