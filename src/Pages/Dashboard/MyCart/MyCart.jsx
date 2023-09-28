@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const MyCart = () => {
     const [cart, refetch] = useCart();
-    const total = cart.reduce((sum, item) => item.price + sum, 0); ;// array reduce to get total of value
+    const total = cart.reduce((sum, item) => item.price + sum, 0); // array reduce to get total of value
 
 
  
