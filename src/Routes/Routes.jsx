@@ -21,9 +21,11 @@ import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 
 
   export const router = createBrowserRouter([
+    
     {
       path: "/",
       element: <Main></Main>,
+
       children: [
         {
             path: '/',

@@ -10,7 +10,7 @@ const MyCart = () => {
     const total = cart.reduce((sum, item) => item.price + sum, 0); // array reduce to get total of value
 
 
- 
+
     const handleDelete = item => {
         Swal.fire({
             title: 'Are you sure?',
@@ -22,7 +22,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item._id}`, {
+                fetch(`https://bistro-boss-server-njbw2bqew-ahsan75412.vercel.app/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -43,7 +43,7 @@ const MyCart = () => {
 
 
 
-    return(
+    return (
         <div className="w-full">
             <Helmet>
                 <title>Bistro Boss | My Cart</title>

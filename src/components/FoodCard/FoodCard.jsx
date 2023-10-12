@@ -17,8 +17,8 @@ const FoodCard = ({ item }) => {
     const handleAddToCart = item => {
         console.log(item);
         if (user && user.email) {
-            const cartItem = {menuItemId: _id,name,image,price, email: user.email}
-            fetch('http://localhost:5000/carts',{
+            const cartItem = { menuItemId: _id, name, image, price, email: user.email }
+            fetch('https://bistro-boss-server-njbw2bqew-ahsan75412.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -51,7 +51,7 @@ const FoodCard = ({ item }) => {
                 confirmButtonText: 'Login Now!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    navigate('/login',{state: {from: location}});
+                    navigate('/login', { state: { from: location } });
                 }
             })
         }
